@@ -1,8 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model CSharp_SurveyWithValidations.Models.User
+<div>
+    <form action="Submit" method="post">
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name">Your Name</label>
+        <input asp-for="Name" type="text" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <span asp-validation-for="Location"></span>
+        <label asp-for="Location">Location</label>
+        <input asp-for="Location" type="text" />
+
+        <span asp-validation-for="Language"></span>
+        <label asp-for="Language">Favorite Language:</label>
+        <select asp-for="Language">
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Aassembly">Assembly</option>
+        </select>
+
+        <label asp-for="Comment">Comment(Optional)</label>
+        <textarea asp-for="Comment" rows="10" cols="30"></textarea>
+        <button type="submit">Send</button>
+    </form>
 </div>

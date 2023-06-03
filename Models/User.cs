@@ -13,7 +13,6 @@ namespace CSharp_SurveyWithValidations.Models
         [Required]
         public string Language { get; set; }
 
-        [Required]
         public string Comment { get; set; }
     }
 }
