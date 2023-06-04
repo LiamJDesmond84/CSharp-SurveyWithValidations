@@ -5,6 +5,7 @@ namespace CSharp_SurveyWithValidations.Models
     public class User
     {
         [Required]
+        [MinLength(2)]
         public string Name { get; set; }
 
         [Required]
@@ -13,6 +14,7 @@ namespace CSharp_SurveyWithValidations.Models
         [Required]
         public string Language { get; set; }
 
-        public string Comment { get; set; }
+        [MaxLength(50)]
+        public string? Comment { get; set; }
     }
 }

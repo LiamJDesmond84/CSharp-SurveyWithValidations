@@ -1,6 +1,6 @@
 ﻿@model CSharp_SurveyWithValidations.Models.User
 <div>
-    <form action="Submit" method="post">
+    <form asp-action="Submit" asp-controller="Home" method="post">
         <span asp-validation-for="Name"></span>
         <label asp-for="Name">Your Name</label>
         <input asp-for="Name" type="text" />

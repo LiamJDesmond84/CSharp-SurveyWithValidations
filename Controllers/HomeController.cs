@@ -31,11 +31,11 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Submit()
+    public IActionResult Submit(User user)
     {
         if(ModelState.IsValid)
         {
-            return View("Submission");
+            return View("Submission", user);
         }
         return View("Index");
     }
